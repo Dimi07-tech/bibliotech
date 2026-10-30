@@ -4,6 +4,7 @@ services:
     name: bibliotech-api
     runtime: node
     plan: free
+    region: frankfurt
     rootDir: backend
     buildCommand: npm ci --omit=dev
     startCommand: node server.js
