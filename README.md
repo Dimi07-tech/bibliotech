@@ -8,6 +8,9 @@ bibliotheque/
 └── render.yaml       Déploiement Render (Blueprint)
 ```
 
+**En ligne :** https://bibliotech-api-0n19.onrender.com (app web + API) — base Supabase `bibliotech` (Frankfurt).
+APK Android : `BiblioTech.apk` (non versionné, se recompile avec la commande de la section 3).
+
 **Base de données : PostgreSQL hébergé sur Supabase.** 5 tables : `utilisateurs`,
 `livres`, `emprunts`, `demandes`, `amendes`. Elles sont créées automatiquement
 au premier démarrage du serveur, avec 8 livres et le compte administrateur.
@@ -34,7 +37,7 @@ Les tables sont visibles dans Supabase → **Table Editor**.
    - `DATABASE_URL` : l'URI Supabase de l'étape 1
    - `ADMIN_EMAIL` / `ADMIN_PASSWORD` : le compte administrateur créé au 1er démarrage
    (`JWT_SECRET` est généré automatiquement.)
-4. **Apply**. Une fois déployé : `https://bibliotech-api-xxxx.onrender.com`
+4. **Apply**. Une fois déployé : `https://bibliotech-api-0n19.onrender.com`
    - l'app dans le navigateur : cette URL
    - l'API : `…/api/stats`
 
@@ -48,7 +51,7 @@ première requête suivante prend ~30-60 s. Les données sont dans Supabase, rie
 **APK Android pointant sur Render :**
 ```bash
 cd mobile
-flutter build apk --release --dart-define=API_URL=https://bibliotech-api-xxxx.onrender.com
+flutter build apk --release --dart-define=API_URL=https://bibliotech-api-0n19.onrender.com
 # -> build/app/outputs/flutter-apk/app-release.apk
 ```
 (L'adresse reste modifiable dans l'app via l'icône « Serveur ».)
