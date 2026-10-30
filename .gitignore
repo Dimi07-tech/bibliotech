@@ -1,0 +1,8 @@
+# Copie du site d'origine (code d'un tiers) : non publie
+site_source/
+node_modules/
+.env
+*.db
+*.db-shm
+*.db-wal
+.DS_Store
